@@ -1,0 +1,66 @@
+.body {
+    border: 2px solid red;
+    height: 100vh;
+    
+}
+.header {
+    height: 10%;
+}
+.navbar {
+    border: 1px solid black;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+.brand {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2em;
+}
+.navigation-links {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+
+}
+.navigation-links li {
+    padding: 0 1em;
+    font-size: 1.2em;
+}
+
+.main {
+    min-height: 90%;
+    border: 1px solid green;
+    overflow: hidden;
+}
+
+.intro {
+    height: 90%;
+}
+
+.background-logo-container {
+    position: relative;
+    border: 5px solid blue;
+    width: 100%;
+}
+
+.background-logo {
+    border: 1px solid black;
+    transform: rotate(180deg);
+    position: absolute;
+    right: -20%;
+}
+
+.main-logo {
+    border: 1px solid black;
+    transform: rotate(-180deg);
+    position: absolute;
+    right: -500px;
+}
+
+. footer {
+
+}
