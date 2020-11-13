@@ -1,8 +1,11 @@
-.body {
+html {
   
+   
+}
+.body {
     height: 100vh;
     overflow-x: hidden;
-    
+   
 }
 .header {
     height: 10%;
@@ -84,6 +87,7 @@
     position: absolute;
     width: 100%;
     z-index: -1;
+
 }
 
 .background-logo {
@@ -101,7 +105,6 @@
 
 .featured-work {
     border: 5px solid green;
-    min-height: 100vh;
     padding-top: 12vh;
 }
 
@@ -112,12 +115,41 @@
 }
 
 .grid {
-    height: 90vh;
+    height: 78vh;
 }
 
 .row {
-    border: 1px solid black;
     height: 38vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.item-row {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: calc(100% - 1em);
+}
+
+.featured-first-row {
+   
+}
+.item-row-1 {
+    background-color: mistyrose;
+    width: calc(50% - 0.5em);
+ 
+}
+
+.featured-second-row {
+   
+}
+
+.item-row-2 {
+  background-color: honeydew;
+  width: calc(33.3% - 0.5em);
 }
 
 . footer {
