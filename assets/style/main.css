@@ -6,13 +6,16 @@
 }
 .header {
     height: 10%;
+    position: fixed;
+    width: 100%;
 }
 .navbar {
     border: 1px solid black;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 3em;
+    padding: 0 96px;
+   
 }
 .brand {
     border: 1px solid black;
@@ -35,7 +38,16 @@
 .main {
     min-height: 90%;
     border: 1px solid green;
+    position: relative;
+    top: 10%;
+    z-index: -1;
    
+}
+
+.section {
+    position: relative;
+    padding: 0 96px;
+
 }
 
 .intro {
@@ -43,10 +55,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+  
     border: 1px solid red;
-    
-    padding: 0 1em;
     font-size: 3em;
 
 }
@@ -60,10 +70,14 @@
     position: absolute;
     bottom: 2em;
     display: flex;
-    font-size: 0.7em;
+    font-size: 0.65em;
 }
 .social-networks {
     padding-left: 1em;;
+    display: flex;
+}
+.social-link {
+    padding: 0 5px;
 }
 
 .background-logo-container {
@@ -83,6 +97,27 @@
     transform: rotate(-180deg);
     position: absolute;
     right: -500px;
+}
+
+.featured-work {
+    border: 5px solid green;
+    min-height: 100vh;
+    padding-top: 12vh;
+}
+
+.featured-work-title {
+    height: 10vh;
+    border: 1px solid black;
+    font-size: 3em;
+}
+
+.grid {
+    height: 90vh;
+}
+
+.row {
+    border: 1px solid black;
+    height: 38vh;
 }
 
 . footer {
