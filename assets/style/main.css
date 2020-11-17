@@ -1,5 +1,5 @@
 html {
-  
+    
    
 }
 .body {
@@ -126,12 +126,54 @@ html {
 }
 
 .item-row {
-    padding: 2em;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     height: calc(100% - 1em);
+}
+
+.item-row {
+    background-image: url(../images/mockups/defult.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-title {
+    padding-right: 1em;
+    font-size: 1.5em;
+    margin-bottom: .8em;
+    position: relative;
+    z-index: 1;
+}
+.project-title::before {
+    content: '';
+    left: -2rem;
+    top: -0.25rem;
+    bottom: -0.25rem;
+    right: 0;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+    transform: scaleX(0.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.item-row:hover .project-title::before {
+    transform: scaleX(1);
+}
+
+.built-item {
+    padding: 2px 5px;
+    color: transparent;
+    
+}
+
+.item-row:hover .built-item {
+
 }
 
 .featured-first-row {
