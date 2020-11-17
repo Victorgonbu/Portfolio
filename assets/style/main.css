@@ -126,12 +126,13 @@ html {
 }
 
 .item-row {
-    padding: 2rem;
+    padding: 2rem 2rem 3rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     height: calc(100% - 1em);
+    position: relative;
 }
 
 .item-row {
@@ -139,6 +140,25 @@ html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.shade {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    z-index: -1;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.9766281512605042) 0%, rgba(2,2,32,0.11948529411764708) 34%, rgba(1,1,8,0.2763480392156863) 70%, rgba(0,0,0,0.9066001400560224) 100%);
+    opacity: 0;
+    transition: opacity 100ms ease-in;
+}
+
+.item-row:hover .shade {
+    opacity: 0.3;
 }
 
 .project-title {
@@ -159,7 +179,7 @@ html {
     z-index: -1;
     transform: scaleX(0.1);
     transform-origin: left;
-    transition: transform 250ms ease-in-out;
+    transition: transform 200ms ease-in;
 }
 
 .item-row:hover .project-title::before {
@@ -168,12 +188,49 @@ html {
 
 .built-item {
     padding: 2px 5px;
-    color: transparent;
-    
+    color: transparent; 
+    transition: all 200ms ease-in 200ms;
 }
 
-.item-row:hover .built-item {
 
+.item-row:hover .built-item {
+    border: 1px solid black;
+    color: black;
+}
+
+.project-link {
+    padding: 1em;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1;
+    color: transparent;
+    text-decoration: none;
+    transition:color 20ms ease-in 440ms;
+}
+
+.project-link::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: red;
+    z-index: -1;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 180ms ease-in;
+    transition-delay: 400ms;
+}
+
+.item-row:hover .project-link {
+    color: white;
+}
+
+.item-row:hover .project-link::after {
+    transform: scale(1);
+    transform-origin: top;
+   
 }
 
 .featured-first-row {
