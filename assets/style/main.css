@@ -3,12 +3,13 @@
     --brown: #4C4637;
     --beich: #B2AB99;
     --exo-green: #00E4C2;
+    --background: #F0F0F0;
 }
 
 .body {
     height: 100vh;
     font-family: 'Merienda One', cursive;
-    background-color: #F0F0F0;
+    background-color: var(--background) ;
     overflow-x: hidden;
 }
 .header {
@@ -22,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 96px;
+    background-color: var(--background);
    
 }
 .brand {
@@ -93,13 +95,15 @@
     position: absolute;
     width: 100%;
     z-index: -1;
+    top: 0;
 
 }
 
 .background-logo {
     transform: rotate(180deg);
     position: absolute;
-    right: -20%;
+    right: 0;
+    top: 0;
 }
 
 .main-logo {
@@ -272,6 +276,11 @@
     display: flex;
     align-items: center;
     
+}
+.about-logo {
+    position: absolute;
+    z-index: -1;
+    right: 0;
 }
 
 .about-section {
