@@ -1,11 +1,15 @@
-html {
-    
-    overflow-x: hidden;
+:root {
+    --yellow: #FFD900;
+    --brown: #4C4637;
+    --beich: #B2AB99;
+    --exo-green: #00E4C2;
 }
+
 .body {
     height: 100vh;
-
-   
+    font-family: 'Merienda One', cursive;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
 }
 .header {
     height: 10%;
@@ -26,6 +30,7 @@ html {
     align-items: center;
     font-weight: 900;
     font-size: 2em;
+    font-family: 'Special Elite', cursive;
 }
 .navigation-links {
     border: 1px solid black;
@@ -58,7 +63,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
+    font-family: 'Special Elite', cursive;
     border: 1px solid red;
     font-size: 3em;
 
@@ -74,6 +79,7 @@ html {
     bottom: 2em;
     display: flex;
     font-size: 0.65em;
+    font-family: 'Merienda One', cursive;
 }
 .social-networks {
     padding-left: 1em;;
@@ -184,7 +190,7 @@ html {
     top: -0.25rem;
     bottom: -0.25rem;
     right: 0;
-    background-color: red;
+    background-color: var(--yellow);
     position: absolute;
     z-index: -1;
     transform: scaleX(0.1);
@@ -204,8 +210,8 @@ html {
 
 
 .item-row:hover .built-item {
-    border: 1px solid black;
-    color: black;
+    background-color: var(--brown);
+    color: white;
 }
 
 .project-link {
@@ -216,6 +222,13 @@ html {
     color: transparent;
     text-decoration: none;
     transition:color 20ms ease-in 440ms;
+  
+}
+
+.project-link i {
+    vertical-align: middle;
+    font-size: 2em;
+    
 }
 
 .project-link::after{
@@ -225,7 +238,7 @@ html {
     width: 100%;
     left: 0;
     top: 0;
-    background-color: red;
+    background-color: var(--yellow);
     z-index: -1;
     transform: scale(0);
     transform-origin: bottom;
@@ -234,7 +247,7 @@ html {
 }
 
 .item-row:hover .project-link {
-    color: white;
+    color: black;
 }
 
 .item-row:hover .project-link::after {
@@ -278,22 +291,27 @@ html {
 
 .about-me h1 {
     font-size: 2.5em;
-    padding-bottom: 2em;
+    padding-bottom: 0em;
+    font-weight: 900;
 
 }
 
 .about-me p {
     border: 1px solid black;
+    color: #787878;
+    line-height: 1.2;
     margin: 2em 0;
     font-size: 1.2em;
     width: 65%;
 }
 
 .about-me a {
-    border: 1px solid black;
+    border: 1px solid white;
     font-size: 1.4em;
     text-decoration: none;
-    padding: 3px 6px;
+    padding: 9px 18px;  
+    background-color: var(--yellow);
+    color: var(--brown);
 }
 
 .about-attributes {
@@ -302,12 +320,13 @@ html {
 }
 
 .attribute {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #727274;
 }
 
 
 .attribute h2 {
     font-size: 1.3em;
+    font-weight: 900;
     padding: 1em 0;
 }
 
@@ -320,6 +339,11 @@ html {
 
 .attribute .tags {
     padding-bottom: 1em;
+    color: #787878;
+}
+
+.attribute .tags span {
+    padding-right: 8px;
 }
 
 
