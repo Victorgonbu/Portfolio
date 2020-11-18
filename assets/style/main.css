@@ -347,6 +347,105 @@
 }
 
 
-. footer {
+.footer {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--yellow);
+    position: relative;
+    top: 10%;
+}
 
+.footer-header {
+    text-align: center;
+    width: 50%;
+}
+
+.footer-header h3 {
+    padding: 1em;
+    font-size: 2.5em;
+}
+
+.footer-header p {
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+.form-wrap {
+    width: 50%;
+    margin: 2.5em 0;
+
+}
+
+.info-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit {
+    border: 1px solid black;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 1em;
+    padding: 1em 0;
+    font-size: 1.2em;
+
+}
+
+.info-form input {
+    width: 44%;
+    padding: 1em;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: white;
+}
+
+.form .message-box {
+    border: 1px solid green;
+    margin-top: 1.2em;
+    width: calc(100% - 2em);
+    resize: none;
+    padding: 1em;
+    border-radius: 5px;
+    border: white;
+}
+
+.footer-links {
+    padding: 4em 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--beich);
+}
+
+.footer-link {
+    padding: 0 .5em;
+    color: var(--beich);
+    font-size: 1.8em;
+    transition: color 100ms ease-in;
+}
+
+.footer-link:hover {
+    color: var(--brown);
+    
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    color: var(--brown);
+    font-size: 1.3em;
+}
+
+.copyright {
+    color: var(--brown);
+}
+
+
+@media (max-width: 1366px) {
+   .body {
+    font-size: 11px;
+   }
 }
