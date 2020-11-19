@@ -192,31 +192,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  transition: box-shadow 100ms ease-in-out;
-}
-
-.item-row:hover {
-  box-shadow: 1px 1px 5px black;
 }
 
 .project-1 {
-  background-image: url(assets/images/mockups/PAW_SHAPED_MOCK.png);
+  background-image: url(../images/mockups/PAW_SHAPED_MOCK.png);
 }
 
 .project-2 {
-  background-image: url(assets/images/mockups/GO_ON_SALES_MOCK.png);
+  background-image: url(../images/mockups/GO_ON_SALES_MOCK.png);
 }
 
 .project-3 {
-  background-image: url(assets/images/mockups/RUBY_DOCS_MOCK.png);
+  background-image: url(../images/mockups/RUBY_DOCS_MOCK.png);
 }
 
 .project-4 {
-  background-image: url(assets/images/mockups/PRIVATE_EVENTS_MOCK.png);
+  background-image: url(../images/mockups/PRIVATE_EVENTS_MOCK.png);
 }
 
 .project-5 {
-  background-image: url(/assets/images/mockups/STAY_TOUCH_MOCK.png);
+  background-image: url(../images/mockups/STAY_TOUCH_MOCK.png);
 }
 
 .shade {
