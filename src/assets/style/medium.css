@@ -46,5 +46,20 @@
       .about-attributes {
         padding: 0 2em;
       }
+
+      .info-form {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .info-form input {
+        width: calc(46% - 1em);
+        margin: 0;
+      }
+
+      .footer-links {
+          flex-direction: row;
+          justify-content: space-between;
+      }
     
 }

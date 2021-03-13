@@ -1,15 +1,17 @@
 :root {
-  --yellow: rgb(255, 230, 0);
-  --brown: #4c4637;
-  --beich: #b2ab99;
+  --main: #98b0a9;
+  --black: #000;
   --exo-green: #00e4c2;
-  --background: #e6e6e6;
+  --background: #fff;
 }
 
 .body {
   font-family: 'Merienda One', cursive;
   background-color: var(--background);
   overflow-x: hidden;
+  min-width: 300px; 
+  font-size: 14px;
+
 }
 
 .header {
@@ -25,6 +27,7 @@
   justify-content: space-between;
   padding: 0 20px;
   background-color: var(--background);
+  z-index: 1;
 }
 
 .brand {
@@ -88,7 +91,7 @@
   height: 2px;
   width: 100%;
   position: absolute;
-  background-color: var(--yellow);
+  background-color: var(--main);
   bottom: 0;
   transform: scaleX(0);
   transform-origin: left;
@@ -162,13 +165,13 @@
 
 .social-link {
   padding: 0 5px;
-  color: var(--brown);
+  color: var(--black);
   transition: color 100ms ease-out;
   font-size: 1.2em;
 }
 
 .social-link:hover {
-  color: var(--yellow);
+  color: var(--exo-green);
 }
 
 .background-logo-container {
@@ -187,7 +190,7 @@
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 0 20px;
   padding-top: 10vh;
@@ -218,7 +221,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 40vh;
+  height: 30vh;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -274,7 +277,7 @@
 }
 
 .item-row:hover .project-title {
-  color: black;
+  color: whitesmoke;
 }
 
 .project-title::before {
@@ -283,7 +286,7 @@
   top: -0.25rem;
   bottom: -0.25rem;
   right: 0;
-  background-color: var(--yellow);
+  background-color: var(--main);
   position: absolute;
   z-index: -1;
   transform: scaleX(0);
@@ -302,8 +305,8 @@
 }
 
 .item-row:hover .built-item {
-  background-color: var(--brown);
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .project-link {
@@ -328,7 +331,7 @@
   width: 100%;
   left: 0;
   top: 0;
-  background-color: var(--yellow);
+  background-color: var(--main);
   z-index: -1;
   transform: scale(0);
   transform-origin: bottom;
@@ -337,7 +340,7 @@
 }
 
 .item-row:hover .project-link {
-  color: black;
+  color: whitesmoke;
 }
 
 .item-row:hover .project-link::after {
@@ -397,10 +400,9 @@
   font-size: 1.4em;
   text-decoration: none;
   padding: 9px 18px;
-  background-color: var(--yellow);
-  color: var(--brown);
+  background-color: var(--main);
+  color: white;
 }
-
 .about-attributes {
   padding: 0 0;
 }
@@ -436,15 +438,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--yellow);
+  background-color: var(--main);
   position: relative;
-  z-index: 3;
+  z-index: 10;
   top: 10%;
 }
 
 .footer-header {
   text-align: center;
-  width: 50%;
+  width: 100%;
+  max-width: 60vh;
 }
 
 .footer-header h3 {
@@ -458,13 +461,15 @@
 }
 
 .form-wrap {
-  width: 50%;
+  width: 100%;
   margin: 2.5em 0;
+  max-width: 575px;
 }
 
 .info-form {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -479,11 +484,12 @@
 }
 
 .info-form input {
-  width: 44%;
+  width: calc(100% - 2em);
   padding: 1em;
   font-size: 1.2em;
   border-radius: 5px;
   border: white;
+  margin-bottom: 3px;
 }
 
 .form .message-box {
@@ -498,41 +504,35 @@
 .footer-links {
   padding: 4em 0;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--beich);
+  flex-direction: column;
+  border-bottom: 1px solid var(--background);
+}
+
+.social-footer-links {
+  text-align: center;
+  margin: 10px;
 }
 
 .footer-link {
   padding: 0 0.5em;
-  color: var(--beich);
+  color: var(--background);
   font-size: 1.8em;
   transition: color 100ms ease-in;
 }
 
 .footer-link:hover {
-  color: var(--brown);
+  color: var(--black);
 }
 
 .email {
   display: flex;
+  justify-content: center;
   align-items: center;
-  color: var(--brown);
+  color: var(--background);
   font-size: 1.3em;
 }
 
 .copyright {
-  color: var(--brown);
-}
-
-@media (max-width: 1366px) {
-  .body {
-    font-size: 11px;
-  }
-
-  .about-logo {
-    position: absolute;
-    z-index: 0;
-    right: -10%;
-    bottom: -6%;
-  }
+  color: var(--background);
+  margin-bottom: 10px;
 }

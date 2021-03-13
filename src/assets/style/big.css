@@ -35,17 +35,7 @@
 
       
 .item-row {
-    padding: 2rem 2rem 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     height: calc(100% - 1em);
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
   }
 
   .item-row-1 {
@@ -55,15 +45,16 @@
   .item-row-2 {
     width: calc(33.3% - 0.5em);
   }
-
   .container {
-    
-    padding: 0 96px;
-
+    padding: 10vh 96px;
   }
+
   
   .about-me p {
     
     width: 70%;
   }
+
+
+  
 }
