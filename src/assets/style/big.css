@@ -1,4 +1,8 @@
 @media (min-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
   .navbar {
     padding: 0 96px;
   }
@@ -45,7 +49,7 @@
   }
 
   .container {
-    padding: 10vh 96px;
+    padding: 10vh 96px 0 96px;
   }
 
   .about-me p {
