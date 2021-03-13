@@ -189,7 +189,7 @@
 .container {
   height: 100vh;
   width: 100%;
-  padding: 0 96px;
+  padding: 0 20px;
   padding-top: 10vh;
 }
 
@@ -353,11 +353,6 @@
   width: 100%;
 }
 
-.about {
-  display: flex;
-  align-items: center;
-}
-
 .about-logo {
   position: absolute;
   z-index: 0;
@@ -367,13 +362,20 @@
 
 .about-section {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .about-section > div {
-  width: 50%;
+  width: 100%;
+  margin: 1em 0;
   padding-top: 1em;
   padding-bottom: 1em;
+  
+}
+
+.about-me {
+  height: 40vh;
 }
 
 .about-me h1 {
@@ -385,9 +387,9 @@
 .about-me p {
   color: #787878;
   line-height: 1.2;
-  margin: 2em 0;
+  margin: 4em 0;
   font-size: 1.2em;
-  width: 65%;
+  width: 100%;
 }
 
 .about-me a {
@@ -400,7 +402,7 @@
 }
 
 .about-attributes {
-  padding: 0 2em;
+  padding: 0 0;
 }
 
 .attribute {

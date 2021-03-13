@@ -1,4 +1,4 @@
-@media (min-width: 500px) {
+@media (min-width: 675px) {
     .navigation-links {
         display: flex;
         align-items: center;
@@ -20,6 +20,31 @@
      
         height: 50vh;
         
+      }
+
+      .about-section {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      
+      .about-section > div {
+        width: 50%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+
+      .about-me p {
+        margin: 2em 0;
+        width: 85%;
+      }
+      .about {
+        display: flex;
+        align-items: center;
+      }
+      
+      .about-attributes {
+        padding: 0 2em;
       }
     
 }
