@@ -1,0 +1,13 @@
+@media (min-width: 500px) {
+    .navigation-links {
+        display: flex;
+        align-items: center;
+    }
+    .drop-down {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+}

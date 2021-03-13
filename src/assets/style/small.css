@@ -23,7 +23,7 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 96px;
+  padding: 0 20px;
   background-color: var(--background);
 }
 
@@ -35,8 +35,40 @@
   font-family: 'Special Elite', cursive;
 }
 
-.navigation-links {
+.drop-down {
   display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 9.9%;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  background-color: var(--background);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.5em;
+  transform: scaleY(0);
+  transition: 200ms ease-in;
+  transform-origin: top;
+}
+
+.dropdown-menu.active {
+  transform: scaleY(1);
+  position: fixed;
+}
+
+.drop-down-icon {
+  font-size: 2em;
+}
+
+.navigation-links {
+  display: none;
   align-items: center;
 }
 
