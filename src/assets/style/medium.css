@@ -10,4 +10,8 @@
     .dropdown-menu {
         display: none;
     }
+
+    .hero-span {
+        right: 15%;
+    }
 }

@@ -110,7 +110,7 @@
 
 .section {
   position: relative;
-  padding: 0 96px;
+  padding: 0 20px;
 }
 
 .intro {
@@ -124,7 +124,7 @@
 }
 
 .intro-info {
-  width: 50%;
+  width: 95%;
 }
 
 .hero-title {
@@ -139,6 +139,7 @@
 
 .hero-span {
   line-height: 0;
+  white-space: nowrap;
   position: absolute;
   right: 0;
   bottom: 0;
