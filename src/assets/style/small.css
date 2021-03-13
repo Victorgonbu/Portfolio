@@ -9,9 +9,8 @@
   font-family: 'Merienda One', cursive;
   background-color: var(--background);
   overflow-x: hidden;
-  min-width: 300px; 
+  min-width: 300px;
   font-size: 14px;
-
 }
 
 .header {
@@ -206,14 +205,6 @@
   font-size: 3em;
 }
 
-.grid {
-  
-}
-
-.row {
-  
-}
-
 .item-row {
   margin: 10px 0;
   padding: 2rem 2rem 3rem 2rem;
@@ -374,7 +365,6 @@
   margin: 1em 0;
   padding-top: 1em;
   padding-bottom: 1em;
-  
 }
 
 .about-me {
@@ -403,6 +393,7 @@
   background-color: var(--main);
   color: white;
 }
+
 .about-attributes {
   padding: 0 0;
 }
