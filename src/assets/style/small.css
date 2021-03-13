@@ -204,22 +204,21 @@
 }
 
 .grid {
-  height: 78vh;
+  
 }
 
 .row {
-  height: 38vh;
-  display: flex;
-  justify-content: space-between;
+  
 }
 
 .item-row {
+  margin: 10px 0;
   padding: 2rem 2rem 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: calc(100% - 1em);
+  height: 40vh;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -347,11 +346,11 @@
 }
 
 .item-row-1 {
-  width: calc(50% - 0.5em);
+  width: 100%;
 }
 
 .item-row-2 {
-  width: calc(33.3% - 0.5em);
+  width: 100%;
 }
 
 .about {
