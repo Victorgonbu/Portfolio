@@ -378,7 +378,7 @@
 }
 
 .about-me {
-  height: 40vh;
+  height: 50vh;
 }
 
 .about-me h1 {
@@ -499,6 +499,7 @@
   padding: 1em;
   border-radius: 5px;
   border: white;
+  height: 20vh;
 }
 
 .footer-links {
