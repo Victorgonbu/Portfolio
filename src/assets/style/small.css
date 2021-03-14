@@ -314,6 +314,7 @@
   z-index: 1;
   color: transparent;
   text-decoration: none;
+  cursor: pointer;
   transition: color 20ms ease-in 440ms;
 }
 
@@ -541,6 +542,20 @@
   font-size: 1em;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 11;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+
+
 .modal {
   position: fixed;
   top: 50vh;
@@ -549,7 +564,17 @@
   border: 1px solid black;
   height: 90vh;
   width: 90vw;
-  z-index: 11;
+  z-index: 12;
+  transform: translate(-50%, -50%) scaleX(0);
+  
+}
+
+.overlay.active {
+ transform: scale(1); 
+ pointer-events: all;
+}
+
+.modal.active {
   transform: translate(-50%, -50%) scaleX(1);
 }
 
@@ -560,6 +585,7 @@
   padding: 5px 10px;
   font-size: 3em;
   border: 1px solid black;
+  cursor: pointer;
 }
 .modal .hero-project-image {
   height: 30%;
@@ -583,7 +609,7 @@
   display: flex;
   flex-direction: column;
   height: 20%;
-  border: 1px solid greenyellow;
+  border: 1px solid black;
   align-items: center;
   
 }

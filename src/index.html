@@ -21,7 +21,7 @@
     </ul>
 
     <div class="modal" id="first-project-modal">
-        <span class="close-button">&times;</span>
+        <span data-close-button class="close-button">&times;</span>
         <div class="hero-project-image">
 
         </div>
@@ -47,6 +47,114 @@
             </p>
         </div>
     </div>
+    <div class="modal" id="second-project-modal">
+        <span data-close-button class="close-button">&times;</span>
+        <div class="hero-project-image">
+
+        </div>
+        <div class="project-images">
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+        </div>
+        <div class="project-buttons">
+            <a class="link" href="">See live <i class="fas fa-external-link-alt icon"></i></a>
+            <a class="link" href="">See Source <i class="fab fa-github icon"></i></a>
+        </div>
+
+        <div class="project-info">
+            <h1 class="project-name">Go on Sales</h1>
+            <div class="built-with">
+                <span class="built-item active black-border">JavaScript</span>
+                <span class="built-item active black-border">HTML</span>
+                <span class="built-item active black-border">CSS</span>
+            </div>
+            <p class="project-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sunt ut pariatur culpa totam vero repellendus possimus facilis alias dicta aspernatur, exercitationem, eos provident quis laborum assumenda error, fugit hic!
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="third-project-modal">
+        <span data-close-button class="close-button">&times;</span>
+        <div class="hero-project-image">
+
+        </div>
+        <div class="project-images">
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+        </div>
+        <div class="project-buttons">
+            <a class="link" href="">See live <i class="fas fa-external-link-alt icon"></i></a>
+            <a class="link" href="">See Source <i class="fab fa-github icon"></i></a>
+        </div>
+
+        <div class="project-info">
+            <h1 class="project-name">Ruby Docs Scraper</h1>
+            <div class="built-with">
+                <span class="built-item active black-border">Ruby on Rails</span>
+                <span class="built-item active black-border">Nokogiri</span>
+            </div>
+            <p class="project-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sunt ut pariatur culpa totam vero repellendus possimus facilis alias dicta aspernatur, exercitationem, eos provident quis laborum assumenda error, fugit hic!
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="fourth-project-modal">
+        <span data-close-button class="close-button">&times;</span>
+        <div class="hero-project-image">
+
+        </div>
+        <div class="project-images">
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+        </div>
+        <div class="project-buttons">
+            <a class="link" href="">See live <i class="fas fa-external-link-alt icon"></i></a>
+            <a class="link" href="">See Source <i class="fab fa-github icon"></i></a>
+        </div>
+
+        <div class="project-info">
+            <h1 class="project-name">Private Events</h1>
+            <div class="built-with">
+                <span class="built-item active black-border">Ruby on Rails</span>
+                <span class="built-item active black-border">HTML</span>
+                <span class="built-item active black-border">CSS</span>
+            </div>
+            <p class="project-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sunt ut pariatur culpa totam vero repellendus possimus facilis alias dicta aspernatur, exercitationem, eos provident quis laborum assumenda error, fugit hic!
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="fifth-project-modal">
+        <span data-close-button class="close-button">&times;</span>
+        <div class="hero-project-image">
+
+        </div>
+        <div class="project-images">
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+            <div class="project-image-container"></div>
+        </div>
+        <div class="project-buttons">
+            <a class="link" href="">See live <i class="fas fa-external-link-alt icon"></i></a>
+            <a class="link" href="">See Source <i class="fab fa-github icon"></i></a>
+        </div>
+
+        <div class="project-info">
+            <h1 class="project-name">Stay in Touch</h1>
+            <div class="built-with">
+                <span class="built-item active black-border">Ruby on Rails</span>
+                <span class="built-item active black-border">HTML</span>
+                <span class="built-item active black-border">CSS</span>
+            </div>
+            <p class="project-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sunt ut pariatur culpa totam vero repellendus possimus facilis alias dicta aspernatur, exercitationem, eos provident quis laborum assumenda error, fugit hic!
+            </p>
+        </div>
+    </div>
+    <div data-modal-overlay class="overlay"></div>
     <header class="header">
         <nav class="navbar">
             <div class="brand">
@@ -101,7 +209,7 @@
                             </div>
                         </div>
                         <span>
-                            <a href="https://github.com/Shaqri/Paw-shaped-RoR-capstone" target="_blank"class="project-link" data-modal-target='#first-project-modal'>See the project</a>
+                            <span class="project-link" data-modal-target='#first-project-modal'>See the project</span>
                         </span>
                         <div class="shade">
 
@@ -117,7 +225,7 @@
                             </div>
                         </div>
                         <span>
-                            <a href="https://github.com/Shaqri/Capstone-Go-on-sales" target="_blank" class="project-link" data-modal-target='#second-project-modal'> See the project</a>
+                            <span class="project-link" data-modal-target='#second-project-modal'>See the project</span>
                         </span>
                         <div class="shade">
 
@@ -135,7 +243,7 @@
                             </div>
                         </div>
                         <span>
-                            <a href="https://github.com/Shaqri/Ruby-docs-web-scraper" target="_blank" class="project-link" data-modal-target='#third-project-modal'> See the project</a>
+                            <span class="project-link" data-modal-target='#third-project-modal'>See the project</span>
                         </span>
                         <div class="shade">
 
@@ -152,7 +260,7 @@
                             </div>
                         </div>
                         <span>
-                            <a href="https://github.com/Shaqri/Private-events" target="_blank" class="project-link" data-modal-target='#fourth-project-modal'> See the project</a>
+                            <span class="project-link" data-modal-target='#fourth-project-modal'>See the project</span>
                         </span>
                         <div class="shade">
 
@@ -169,7 +277,7 @@
                             </div>
                         </div>
                         <span>
-                            <a href="https://github.com/Shaqri/ror-social-scaffold" target="_blank" class="project-link" data-modal-target='#fifth-project-modal'> See the project</a>
+                            <span class="project-link" data-modal-target='#fifth-project-modal'>See the project</span>
                         </span>
                         <div class="shade">
 
