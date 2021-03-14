@@ -581,8 +581,6 @@
   transform: translate(-50%, -50%) scaleX(1);
 }
 
-
-
 .modal .close-button {
   position: absolute;
   top: 0;
@@ -606,7 +604,7 @@
   background-repeat: no-repeat;
 }
 
-.modal-one .project-image-container {
+.modal .project-image-container {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -633,6 +631,54 @@
 
 .modal-one .project-image-container.three {
   background-image: url(../images/project-screenshots/pawshaped/accomplished-section.png);
+}
+
+.modal-two .project-image-container.one {
+  background-image: url(../images/project-screenshots/go-on-sales/main.png);
+}
+
+.modal-two .project-image-container.two {
+  background-image: url(../images/project-screenshots/go-on-sales/search.png);
+}
+
+.modal-two .project-image-container.three {
+  background-image: url(../images/project-screenshots/go-on-sales/footer.png);
+}
+
+.modal-three .project-image-container.one {
+  background-image: url(../images/project-screenshots/zombie-raid/first.png);
+}
+
+.modal-three .project-image-container.two {
+  background-image: url(../images/project-screenshots/zombie-raid/second.png);
+}
+
+.modal-three .project-image-container.three {
+  background-image: url(../images/project-screenshots/zombie-raid/game-over.png);
+}
+
+.modal-four .project-image-container.one {
+  background-image: url(../images/project-screenshots/zombie-raid/first.png);
+}
+
+.modal-four .project-image-container.two {
+  background-image: url(../images/project-screenshots/zombie-raid/second.png);
+}
+
+.modal-four .project-image-container.three {
+  background-image: url(../images/project-screenshots/zombie-raid/game-over.png);
+}
+
+.modal-five .project-image-container.one {
+  background-image: url(../images/project-screenshots/stay-in-touch/main.png);
+}
+
+.modal-five .project-image-container.two {
+  background-image: url(../images/project-screenshots/stay-in-touch/profile.png);
+}
+
+.modal-five .project-image-container.three {
+  background-image: url(../images/project-screenshots/stay-in-touch/friends.png);
 }
 
 .modal .project-buttons {
