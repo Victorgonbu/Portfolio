@@ -21,9 +21,28 @@ navLink.forEach(link => {
 const seeProjectButtons = document.querySelectorAll('[data-modal-target]');
 const overlay = document.querySelector('[data-modal-overlay]');
 
+const resetCarrouselSelector = (parentElement) => {
+        for(let i = 0; i < parentElement.childElementCount; i+=1){
+            if(parentElement.children[i].classList.contains('current-image')){
+                parentElement.children[i].classList.remove('current-image');
+            }
+        }
+}
+
 seeProjectButtons.forEach( projectButton => {
     projectButton.addEventListener('click', () => {
         const modal = document.querySelector(projectButton.dataset.modalTarget);
+        const defaultHeroImages = document.querySelectorAll('[data-hero-target]');
+        // pretty similar to the thing we are doing in project images --refactor number 1
+        defaultHeroImages.forEach(defaultImage => {
+            const heroImageContainer = document.querySelector(defaultImage.dataset.heroTarget);
+            const defaultHeroImage = defaultImage.currentStyle || window.getComputedStyle(defaultImage, false);
+            const defaultHeroImageUrl = defaultHeroImage.backgroundImage.slice(4, -1).replace(/"/g, "");
+            heroImageContainer.style.backgroundImage = `url(${defaultHeroImageUrl})`
+            resetCarrouselSelector(defaultImage.parentElement);
+            defaultImage.classList.add('current-image');
+            
+        });
         modal.classList.add('active');
         overlay.classList.add('active');
     });
@@ -53,5 +72,13 @@ projectImages.forEach(image => {
         const divBackground = image.currentStyle || window.getComputedStyle(image, false);
         const imageUrl = divBackground.backgroundImage.slice(4, -1).replace(/"/g, "");
         heroContainer.style.backgroundImage = `url(${imageUrl})`;
+        // need refactor with number 1
+        for(let i = 0; i < image.parentElement.childElementCount; i+=1){
+            if(image.parentElement.children[i].classList.contains('current-image')) {
+                image.parentElement.children[i].classList.remove('current-image');
+                image.classList.add('current-image');
+            }
+        }
+        
     });
 });

@@ -554,6 +554,11 @@
   transform: scale(0);
 }
 
+.current-image {
+  border: 1px solid var(--exo-green);
+  box-shadow: 1px 1px 5px var(--exo-green);
+}
+
 .modal {
   position: fixed;
   top: 50vh;
