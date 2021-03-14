@@ -11,6 +11,7 @@
   overflow-x: hidden;
   min-width: 300px;
   font-size: 11px;
+ 
 }
 
 .header {
@@ -218,6 +219,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
+  box-shadow: 1px 1px 5px var(--main);
 }
 
 .project-1 {
@@ -293,6 +295,11 @@
   padding: 2px 5px;
   color: transparent;
   transition: all 200ms ease-in 200ms;
+}
+
+.built-item.active {
+  background-color: white;
+  color: black;
 }
 
 .item-row:hover .built-item {
@@ -527,4 +534,93 @@
 .copyright {
   color: var(--background);
   margin-bottom: 10px;
+}
+
+.black-border {
+  border: 1px solid black;
+  font-size: 1em;
+}
+
+.modal {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  background-color: white;
+  border: 1px solid black;
+  height: 90vh;
+  width: 90vw;
+  z-index: 11;
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.modal .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  font-size: 3em;
+  border: 1px solid black;
+}
+.modal .hero-project-image {
+  height: 30%;
+  border: 1px solid blue;
+} 
+
+.modal .project-images {
+  display: flex;
+  height: 15%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-images .project-image-container {
+  border: 1px solid red;
+  width: 28%;
+  height: 70%;
+}
+
+.modal .project-buttons {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  border: 1px solid greenyellow;
+  align-items: center;
+  
+}
+
+.project-buttons .link {
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--main);
+  background-color: var(--main);
+  display: inline-block;
+  width: 92%;
+  padding: 1.3em;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.link .icon {
+  position: absolute;
+  right: 1em;
+}
+
+.modal .project-info {
+  height: 35%;
+  border: 1px solid black;
+  padding: 0 4%;
+}
+
+.project-info .project-name {
+  padding: 1em 0;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.project-info .project-description {
+  font-size: 1.2em;
+  padding: 1em 0;
+  font-weight: 100;
 }

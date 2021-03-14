@@ -14,6 +14,6 @@ const navLink = document.querySelectorAll('.nav-link');
 
 navLink.forEach(link => {
     link.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('active');
+        dropdownMenu.classList.remove('active');
     });
 });
