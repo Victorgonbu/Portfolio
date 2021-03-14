@@ -45,3 +45,13 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
+const projectImages = document.querySelectorAll('[data-image-target]');
+
+projectImages.forEach(image => {
+    image.addEventListener('click', () => {
+        const heroContainer = document.querySelector(image.dataset.imageTarget);
+        const divBackground = image.currentStyle || window.getComputedStyle(image, false);
+        const imageUrl = divBackground.backgroundImage.slice(4, -1).replace(/"/g, "");
+        heroContainer.style.backgroundImage = `url(${imageUrl})`;
+    });
+});

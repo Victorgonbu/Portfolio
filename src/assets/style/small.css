@@ -554,14 +554,12 @@
   transform: scale(0);
 }
 
-
-
 .modal {
   position: fixed;
   top: 50vh;
   left: 50vw;
   background-color: white;
-  border: 1px solid black;
+  box-shadow: 1px 1px 7px rgb(204, 204, 204);
   height: 90vh;
   width: 90vw;
   z-index: 12;
@@ -578,19 +576,35 @@
   transform: translate(-50%, -50%) scaleX(1);
 }
 
+
+
 .modal .close-button {
   position: absolute;
   top: 0;
   right: 0;
   padding: 5px 10px;
   font-size: 3em;
-  border: 1px solid black;
+  color: rgb(230, 230, 230);
   cursor: pointer;
+  background-color: var(--main);
+  transition: 100ms ease-out;
 }
+
+.modal .close-button:hover {
+  color: white;
+  box-shadow: -1px 1px 3px white;
+}
+
 .modal .hero-project-image {
   height: 30%;
-  border: 1px solid blue;
-} 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.modal-one .project-image-container {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 
 .modal .project-images {
   display: flex;
@@ -600,16 +614,26 @@
 }
 
 .project-images .project-image-container {
-  border: 1px solid red;
   width: 28%;
   height: 70%;
+}
+
+.modal-one .project-image-container.one {
+  background-image: url(../images/project-screenshots/pawshaped/Opera\ Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png);
+}
+
+.modal-one .project-image-container.two {
+  background-image: url(../images/project-screenshots/pawshaped/paws.png);
+}
+
+.modal-one .project-image-container.three {
+  background-image: url(../images/project-screenshots/pawshaped/accomplished-section.png);
 }
 
 .modal .project-buttons {
   display: flex;
   flex-direction: column;
-  height: 20%;
-  border: 1px solid black;
+  height: 15%;
   align-items: center;
   
 }
@@ -634,9 +658,9 @@
 }
 
 .modal .project-info {
-  height: 35%;
-  border: 1px solid black;
+  height: 40%;
   padding: 0 4%;
+  font-size: 14px;
 }
 
 .project-info .project-name {
