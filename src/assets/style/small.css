@@ -578,7 +578,6 @@
 }
 
 .modal .modal-middle-section {
-  border: 1px solid red;
   height: 35%;
 }
 
@@ -612,6 +611,7 @@
   height: 30%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  box-shadow: 0 1px 3px gainsboro;
 }
 .modal .project-images {
   display: flex;
@@ -620,7 +620,6 @@
   max-width: 675px;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
 }
 
 .project-images .project-image-container {
@@ -696,7 +695,6 @@
   flex-direction: column;
   height: 60%;
   align-items: center;
-  border: 1px solid black;
 }
 
 .project-buttons .link {
@@ -721,8 +719,7 @@
 
 .modal .project-info {
   height: 35%;
-  border: 1px solid black;
-  padding: 0 4%;
+  padding: 0 2.2%;
   font-size: 11px;
 }
 

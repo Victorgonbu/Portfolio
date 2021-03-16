@@ -67,7 +67,6 @@
   }
   .modal .modal-middle-section {
     height: 15%;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
   }
@@ -77,7 +76,7 @@
   }
 
   .modal .project-buttons {
-    
+    padding-top: 1em;
     height: 100%;
     width: 50%;
     
