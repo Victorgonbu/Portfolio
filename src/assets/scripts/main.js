@@ -87,3 +87,5 @@ projectImages.forEach(image => {
         
     });
 });
+
+const getmyResume = document.querySelector('.about-me a');

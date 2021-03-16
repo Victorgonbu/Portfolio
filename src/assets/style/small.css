@@ -397,13 +397,51 @@
   width: 100%;
 }
 
-.about-me a {
-  border: 1px solid white;
-  font-size: 1.4em;
-  text-decoration: none;
-  padding: 9px 18px;
-  background-color: var(--main);
-  color: white;
+.pop-button-hover {
+  position: relative;
+  display: inline-block;
+  background-color: var(--exo-green);
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.pop-button-hover::before,
+.pop-button-hover::after {
+    content: '';
+    display: block;
+    background-color: var(--exo-green);
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    transition: all .15s ease;
+
+}
+
+.pop-button-hover::before {
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: rotate(-45deg) scale(0);
+}
+
+.pop-button-hover::after {
+  right: 0;
+  bottom: 0;
+  transform-origin: bottom right;
+  transform: rotate(45deg) scale(0);
+}
+
+.pop-button-hover:hover::before {
+  transform: rotate(-45deg) scale(1);
+}
+
+.pop-button-hover:hover::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.pop-button-hover:hover a {
+  transform: translate(6px, -6px);
 }
 
 .about-attributes {
@@ -693,19 +731,20 @@
   align-items: center;
 }
 
-.project-buttons .link {
+.pop-button-hover .link {
   text-align: center;
   position: relative;
-  border: 1px solid var(--main);
-  background-color: var(--main);
-  display: inline-block;
-  width: 92%;
-  max-width: 250px;
+  background-color: white;
+  display: block;
+  width: 100.3%;
   padding: 1.3em;
-  margin-bottom: 10px;
-  color: white;
+  color: black;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  border: 1px solid var(--main);
+  transform: translate(0, 0);
+  transition: all 150ms ease;
+  z-index: 10;
 }
 
 .link .icon {
