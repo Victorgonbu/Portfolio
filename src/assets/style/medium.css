@@ -72,7 +72,11 @@
   }
 
   .modal .hero-project-image {
-    height: 50%;
+    height: 60%;
+  }
+
+  .modal .project-info {
+    height: 25%;
   }
 
   .modal .project-buttons {

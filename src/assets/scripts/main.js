@@ -2,6 +2,7 @@ import '../style/reset.css';
 import '../style/small.css';
 import '../style/medium.css';
 import '../style/big.css';
+import gsap from 'gsap';
 
 const dropdown = document.querySelector('[data-dropdown]');
 const dropdownMenu = document.querySelector('[data-dropdown-menu]');
@@ -43,6 +44,8 @@ seeProjectButtons.forEach( projectButton => {
             defaultImage.classList.add('current-image');
             
         });
+    
+        gsap.fromTo(modal, {scaleX: 0, scaleY: 1, transformOrigin: "left", left: "-50vw", top: "50vh"}, { left: "50vw", scaleX: 1, ease: "expo.out", duration: 0.5});
         modal.classList.add('active');
         overlay.classList.add('active');
     });
@@ -53,6 +56,7 @@ const closeButtons = document.querySelectorAll('[data-close-button]');
 closeButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modal = button.closest('.modal');
+        gsap.fromTo(modal, {scaleY: 1}, {top: "-50vh", scaleY: 0, transformOrigin: "top", ease: "bounce.out", duration: 0.5});
         modal.classList.remove('active');
         overlay.classList.remove('active');
     });
@@ -60,6 +64,7 @@ closeButtons.forEach(button => {
 
 overlay.addEventListener('click', () => {
     const activeModal = document.querySelector('.modal.active');
+    gsap.fromTo(activeModal, {scaleY: 1}, {top: "-50vh", scaleY: 0, transformOrigin: "top", ease: "bounce.out", duration: 0.5});
     activeModal.classList.remove('active');
     overlay.classList.remove('active');
 });

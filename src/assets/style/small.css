@@ -566,10 +566,10 @@
 .modal {
   position: fixed;
   top: 50vh;
-  left: 50vw;
   background-color: white;
   box-shadow: 1px 1px 7px rgb(204, 204, 204);
   height: 90vh;
+  max-height: 650px;
   width: 90vw;
   z-index: 12;
   transform: translate(-50%, -50%) scaleX(0);
@@ -584,10 +584,6 @@
 .overlay.active {
  transform: scale(1); 
  pointer-events: all;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scaleX(1);
 }
 
 .modal .close-button {
