@@ -291,6 +291,10 @@
   transform: scaleX(1);
 }
 
+.built-with {
+  white-space: nowrap;
+}
+
 .built-item {
   padding: 2px 5px;
   color: transparent;
@@ -569,7 +573,13 @@
   width: 90vw;
   z-index: 12;
   transform: translate(-50%, -50%) scaleX(0);
-  
+  max-width: 1046px;
+  min-width: 220px;
+}
+
+.modal .modal-middle-section {
+  border: 1px solid red;
+  height: 35%;
 }
 
 .overlay.active {
@@ -603,22 +613,22 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
-.modal .project-image-container {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
 .modal .project-images {
   display: flex;
-  height: 15%;
+  height: 40%;
+  width: 100%;
+  max-width: 675px;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid black;
 }
 
 .project-images .project-image-container {
   width: 28%;
   height: 70%;
+  max-width: 93px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .modal-one .project-image-container.one {
@@ -684,9 +694,9 @@
 .modal .project-buttons {
   display: flex;
   flex-direction: column;
-  height: 15%;
+  height: 60%;
   align-items: center;
-  
+  border: 1px solid black;
 }
 
 .project-buttons .link {
@@ -696,6 +706,7 @@
   background-color: var(--main);
   display: inline-block;
   width: 92%;
+  max-width: 250px;
   padding: 1.3em;
   margin-bottom: 10px;
   color: white;
@@ -709,9 +720,10 @@
 }
 
 .modal .project-info {
-  height: 40%;
+  height: 35%;
+  border: 1px solid black;
   padding: 0 4%;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .project-info .project-name {

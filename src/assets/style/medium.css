@@ -60,4 +60,26 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .modal .project-images {
+    max-width: 400px;
+    height: 100%;
+  }
+  .modal .modal-middle-section {
+    height: 15%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal .hero-project-image {
+    height: 50%;
+  }
+
+  .modal .project-buttons {
+    
+    height: 100%;
+    width: 50%;
+    
+  }
 }
