@@ -23,16 +23,6 @@ seeProjectButtons.forEach( projectButton => {
     projectButton.addEventListener('click', modal.open);
 });
 
-const closeButtons = document.querySelectorAll('[data-close-button]');
-
-closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        gsap.fromTo(modal, {scaleY: 1}, {top: "-50vh", scaleY: 0, transformOrigin: "top", ease: "bounce.out", duration: 0.5});
-        modal.classList.remove('active');
-        overlay.classList.remove('active');
-    });
-});
 
 overlay.addEventListener('click', () => {
     const activeModal = document.querySelector('.modal.active');
