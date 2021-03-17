@@ -60,6 +60,32 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  
+  .project-title {
+    color: transparent;
+  }
+
+  .project-title::before {
+    transform: scaleX(0);
+  }
+
+  .project-link {
+    color: transparent;
+  }
+
+  .project-link::after {
+    transform: scale(0);
+  }
+
+  .built-item {
+    color: transparent;
+    background-color: transparent;
+  }
+
+  .built-item.active {
+    background-color: white;
+    color: black;
+  }
 
   .modal .project-images {
     max-width: 400px;

@@ -207,6 +207,7 @@
 }
 
 .item-row {
+  font-size: 1em;
   margin: 10px 0;
   padding: 2rem 2rem 3rem 2rem;
   display: flex;
@@ -264,7 +265,7 @@
   font-size: 1.5em;
   margin-bottom: 0.8em;
   position: relative;
-  color: transparent;
+  color: white;
   z-index: 1;
   transition: color 150ms ease-in;
 }
@@ -282,7 +283,7 @@
   background-color: var(--main);
   position: absolute;
   z-index: -1;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: left;
   transition: transform 200ms ease-in;
 }
@@ -297,13 +298,9 @@
 
 .built-item {
   padding: 2px 5px;
-  color: transparent;
-  transition: all 200ms ease-in 200ms;
-}
-
-.built-item.active {
-  background-color: white;
   color: black;
+  background-color: white;
+  transition: all 200ms ease-in 200ms;
 }
 
 .item-row:hover .built-item {
@@ -312,11 +309,11 @@
 }
 
 .project-link {
-  padding: 1em;
-  font-size: 1.1em;
+  padding: 1em 2em;
+  font-size: 1.35em;
   position: relative;
   z-index: 1;
-  color: transparent;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   transition: color 20ms ease-in 440ms;
@@ -336,7 +333,7 @@
   top: 0;
   background-color: var(--main);
   z-index: -1;
-  transform: scale(0);
+  transform: scale(1);
   transform-origin: bottom;
   transition: transform 180ms ease-in;
   transition-delay: 400ms;
@@ -613,7 +610,7 @@
   transform: translate(-50%, -50%) scaleX(0);
   max-width: 1046px;
   min-width: 220px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .modal .modal-middle-section {

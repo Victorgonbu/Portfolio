@@ -1,11 +1,12 @@
 import gsap from 'gsap';
 
-const Modal = (projectButton, overlay) => {
+const Modal = (() => {
+    
     const defaultHeroImages = document.querySelectorAll('[data-hero-target]');
-    const modal = document.querySelector(projectButton.dataset.modalTarget);
     const closeButtons = document.querySelectorAll('[data-close-button]');
+    const overlay = document.querySelector('[data-modal-overlay]');
 
-    const setContainer = () => {
+    const setContainer = (modal) => {
         gsap.fromTo(modal, {scaleX: 0, scaleY: 1, transformOrigin: "left", left: "-50vw", top: "50vh"}, { left: "50vw", scaleX: 1, ease: "expo.out", duration: 0.35});
         modal.classList.add('active');
     }
@@ -26,37 +27,45 @@ const Modal = (projectButton, overlay) => {
         }
     }
 
-    const setDefaultCarrouselSelector = (defaultImage) => {
-        defaultImage.classList.add('current-image');
+    const setCarrouselSelector = (image) => {
+        image.classList.add('current-image');
     }
 
-    const setHeroImage = (defaultImage) => {
-        const heroImageContainer = document.querySelector(defaultImage.dataset.heroTarget);
-        const defaultHeroImage = defaultImage.currentStyle || window.getComputedStyle(defaultImage, false);
+    const setHeroImage = (image) => {
+        const heroImageContainer = document.querySelector(image.dataset.heroTarget) || document.querySelector(image.dataset.imageTarget);
+        const defaultHeroImage = image.currentStyle || window.getComputedStyle(image, false);
         const defaultHeroImageUrl = defaultHeroImage.backgroundImage.slice(4, -1).replace(/"/g, "");
         heroImageContainer.style.backgroundImage = `url(${defaultHeroImageUrl})`
-        resetCarrouselSelector(defaultImage.parentElement);
-        setDefaultCarrouselSelector(defaultImage);
+        resetCarrouselSelector(image.parentElement);
+        setCarrouselSelector(image);
     }
 
-    const open = () => {
-        setContainer();
+    const open = (projectButton) => {
+        const modal = document.querySelector(projectButton.dataset.modalTarget);
+        setContainer(modal);
         setOverlay(overlay);
     }
 
-    const close = (event) => {
-        const modal = event.path[1];
+    const close = (modal) => {
         gsap.fromTo(modal, {scaleY: 1}, {top: "-50vh", scaleY: 0, transformOrigin: "top", ease: "bounce.out", duration: 0.5});
         hide(modal);
         hide(overlay);
     }
 
+    overlay.addEventListener('click', () => {
+        const modal = document.querySelector('.modal.active');
+        close(modal);
+    });
     defaultHeroImages.forEach(setHeroImage);
-    closeButtons.forEach(button => { button.addEventListener('click', close) });
+    closeButtons.forEach(button => { button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        close(modal);
+    }) });
 
     return {
-        open
+        open,
+        setHeroImage
     }
-}
+})();
 
 export default Modal;
