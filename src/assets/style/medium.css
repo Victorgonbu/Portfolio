@@ -60,7 +60,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .project-title {
     color: transparent;
   }
@@ -91,6 +91,7 @@
     max-width: 400px;
     height: 100%;
   }
+
   .modal .modal-middle-section {
     height: 15%;
     display: flex;
@@ -109,6 +110,5 @@
     padding-top: 1em;
     height: 100%;
     width: 50%;
-    
   }
 }
