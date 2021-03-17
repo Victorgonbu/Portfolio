@@ -613,6 +613,7 @@
   transform: translate(-50%, -50%) scaleX(0);
   max-width: 1046px;
   min-width: 220px;
+  border-radius: 5px;
 }
 
 .modal .modal-middle-section {
