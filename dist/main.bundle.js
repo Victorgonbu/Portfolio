@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n\n\nvar Modal = function () {\n  var defaultHeroImages = document.querySelectorAll('[data-hero-target]');\n  var closeButtons = document.querySelectorAll('[data-close-button]');\n  var overlay = document.querySelector('[data-modal-overlay]');\n\n  var setContainer = function setContainer(modal) {\n    gsap__WEBPACK_IMPORTED_MODULE_0__.default.fromTo(modal, {\n      scaleX: 0,\n      scaleY: 1,\n      transformOrigin: 'left',\n      left: '-50vw',\n      top: '50vh'\n    }, {\n      left: '50vw',\n      scaleX: 1,\n      ease: 'expo.out',\n      duration: 0.35\n    });\n    modal.classList.add('active');\n  };\n\n  var setOverlay = function setOverlay(overlay) {\n    overlay.classList.add('active');\n  };\n\n  var hide = function hide(element) {\n    element.classList.remove('active');\n  };\n\n  var resetCarrouselSelector = function resetCarrouselSelector(parentElement) {\n    for (var i = 0; i < parentElement.childElementCount; i += 1) {\n      if (parentElement.children[i].classList.contains('current-image')) {\n        parentElement.children[i].classList.remove('current-image');\n      }\n    }\n  };\n\n  var setCarrouselSelector = function setCarrouselSelector(image) {\n    image.classList.add('current-image');\n  };\n\n  var setHeroImage = function setHeroImage(image) {\n    var heroImageContainer = document.querySelector(image.dataset.heroTarget) || document.querySelector(image.dataset.imageTarget);\n    var defaultHeroImage = image.currentStyle || window.getComputedStyle(image, false);\n    var defaultHeroImageUrl = defaultHeroImage.backgroundImage.slice(4, -1).replace(/\"/g, '');\n    heroImageContainer.style.backgroundImage = \"url(\".concat(defaultHeroImageUrl, \")\");\n    resetCarrouselSelector(image.parentElement);\n    setCarrouselSelector(image);\n  };\n\n  var open = function open(projectButton) {\n    var modal = document.querySelector(projectButton.dataset.modalTarget);\n    setContainer(modal);\n    setOverlay(overlay);\n  };\n\n  var close = function close(modal) {\n    gsap__WEBPACK_IMPORTED_MODULE_0__.default.fromTo(modal, {\n      scaleY: 1\n    }, {\n      top: '-50vh',\n      scaleY: 0,\n      transformOrigin: 'top',\n      ease: 'bounce.out',\n      duration: 0.5\n    });\n    hide(modal);\n    hide(overlay);\n  };\n\n  overlay.addEventListener('click', function () {\n    var modal = document.querySelector('.modal.active');\n    close(modal);\n  });\n  defaultHeroImages.forEach(setHeroImage);\n  closeButtons.forEach(function (button) {\n    button.addEventListener('click', function () {\n      var modal = button.closest('.modal');\n      close(modal);\n    });\n  });\n  return {\n    open: open,\n    setHeroImage: setHeroImage\n  };\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Modal);\n\n//# sourceURL=webpack://portfolio/./src/assets/scripts/modal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n\n\nvar Modal = function () {\n  var defaultHeroImages = document.querySelectorAll('[data-hero-target]');\n  var closeButtons = document.querySelectorAll('[data-close-button]');\n  var overlay = document.querySelector('[data-modal-overlay]');\n\n  var setContainer = function setContainer(modal) {\n    gsap__WEBPACK_IMPORTED_MODULE_0__.default.fromTo(modal, {\n      scaleX: 0,\n      scaleY: 1,\n      transformOrigin: 'left',\n      left: '-50vw',\n      top: '50vh'\n    }, {\n      left: '50vw',\n      scaleX: 1,\n      ease: 'expo.out',\n      duration: 0.35\n    });\n    modal.classList.add('active');\n  };\n\n  var setOverlay = function setOverlay(overlay) {\n    overlay.classList.add('active');\n  };\n\n  var hide = function hide(element) {\n    element.classList.remove('active');\n  };\n\n  var resetCarrouselSelector = function resetCarrouselSelector(parentElement) {\n    for (var i = 0; i < parentElement.childElementCount; i += 1) {\n      if (parentElement.children[i].classList.contains('current-image')) {\n        parentElement.children[i].classList.remove('current-image');\n      }\n    }\n  };\n\n  var setCarrouselSelector = function setCarrouselSelector(image) {\n    image.classList.add('current-image');\n  };\n\n  var setHeroImage = function setHeroImage(image) {\n    var heroImageContainer = document.querySelector(image.dataset.heroTarget) || document.querySelector(image.dataset.imageTarget);\n    var defaultHeroImage = image.currentStyle || window.getComputedStyle(image, false);\n    var defaultHeroImageUrl = defaultHeroImage.backgroundImage.slice(4, -1).replace(/\"/g, '');\n    heroImageContainer.style.backgroundImage = \"url(\".concat(defaultHeroImageUrl, \")\");\n    resetCarrouselSelector(image.parentElement);\n    setCarrouselSelector(image);\n  };\n\n  var open = function open(projectButton) {\n    var modal = document.querySelector(projectButton.dataset.modalTarget);\n    setContainer(modal);\n    setOverlay(overlay);\n  };\n\n  var close = function close(modal) {\n    gsap__WEBPACK_IMPORTED_MODULE_0__.default.fromTo(modal, {\n      scaleY: 1\n    }, {\n      top: '-50vh',\n      scaleY: 0,\n      transformOrigin: 'top',\n      ease: 'bounce.out',\n      duration: 0.5\n    });\n    hide(modal);\n    hide(overlay);\n  };\n\n  overlay.addEventListener('click', function () {\n    var modal = document.querySelector('.modal.active');\n    close(modal);\n  });\n  document.addEventListener('keydown', function (event) {\n    if (event.key === 'Escape') {\n      var modal = document.querySelector('.modal.active');\n      if (modal) close(modal);\n    }\n  });\n  defaultHeroImages.forEach(setHeroImage);\n  closeButtons.forEach(function (button) {\n    button.addEventListener('click', function () {\n      var modal = button.closest('.modal');\n      close(modal);\n    });\n  });\n  return {\n    open: open,\n    setHeroImage: setHeroImage\n  };\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Modal);\n\n//# sourceURL=webpack://portfolio/./src/assets/scripts/modal.js?");
 
 /***/ }),
 
@@ -130,6 +130,176 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/assets/images/mockups/GO_ON_SALES_MOCK.png":
+/*!********************************************************!*\
+  !*** ./src/assets/images/mockups/GO_ON_SALES_MOCK.png ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"87e41f3fa6af4010ff0f.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/GO_ON_SALES_MOCK.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/mockups/PAW_SHAPED_MOCK.png":
+/*!*******************************************************!*\
+  !*** ./src/assets/images/mockups/PAW_SHAPED_MOCK.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"59493954a68e6448c52f.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/PAW_SHAPED_MOCK.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/mockups/PRIVATE_EVENTS_MOCK.png":
+/*!***********************************************************!*\
+  !*** ./src/assets/images/mockups/PRIVATE_EVENTS_MOCK.png ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"8d786916996398ab2150.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/PRIVATE_EVENTS_MOCK.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/mockups/RUBY_DOCS_MOCK.png":
+/*!******************************************************!*\
+  !*** ./src/assets/images/mockups/RUBY_DOCS_MOCK.png ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a594ce6b724050d96435.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/RUBY_DOCS_MOCK.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/mockups/STAY_TOUCH_MOCK.png":
+/*!*******************************************************!*\
+  !*** ./src/assets/images/mockups/STAY_TOUCH_MOCK.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"dcee05c1e24949fb8d2e.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/STAY_TOUCH_MOCK.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/go-on-sales/footer.png":
+/*!**********************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/go-on-sales/footer.png ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"04c86e99284a9229d7f0.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/go-on-sales/footer.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/go-on-sales/main.png":
+/*!********************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/go-on-sales/main.png ***!
+  \********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"07f61d5631f0f44fe39b.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/go-on-sales/main.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/go-on-sales/search.png":
+/*!**********************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/go-on-sales/search.png ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"cd4939b0b238e09a3f4f.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/go-on-sales/search.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/pawshaped/Opera Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png":
+/*!********************************************************************************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/pawshaped/Opera Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png ***!
+  \********************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"312094e0549c87dd59e1.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/pawshaped/Opera_Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/pawshaped/accomplished-section.png":
+/*!**********************************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/pawshaped/accomplished-section.png ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0ddf195bf68763d18693.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/pawshaped/accomplished-section.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/pawshaped/paws.png":
+/*!******************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/pawshaped/paws.png ***!
+  \******************************************************************/
+/***/ ((module) => {
+
+eval("module.exports = \"data:image/png;base64,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\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/pawshaped/paws.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/stay-in-touch/friends.png":
+/*!*************************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/stay-in-touch/friends.png ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"d0c44255868832dc2662.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/stay-in-touch/friends.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/stay-in-touch/main.png":
+/*!**********************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/stay-in-touch/main.png ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"345e22148450f8721018.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/stay-in-touch/main.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/stay-in-touch/profile.png":
+/*!*************************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/stay-in-touch/profile.png ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e8fdfd9d12b87a39bfee.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/stay-in-touch/profile.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/zombie-raid/first.png":
+/*!*********************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/zombie-raid/first.png ***!
+  \*********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"d572634a802bf80ec5c2.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/zombie-raid/first.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/zombie-raid/game-over.png":
+/*!*************************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/zombie-raid/game-over.png ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"f9aa2a406ae62fbc9d7d.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/zombie-raid/game-over.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/project-screenshots/zombie-raid/second.png":
+/*!**********************************************************************!*\
+  !*** ./src/assets/images/project-screenshots/zombie-raid/second.png ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1733ed09c8e30e71e313.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/zombie-raid/second.png?");
+
+/***/ }),
+
 /***/ "./src/assets/style/big.css":
 /*!**********************************!*\
   !*** ./src/assets/style/big.css ***!
@@ -177,176 +347,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function memorize() {\n    if (typeof memo === 'undefined') {\n      // Test for IE <= 9 as proposed by Browserhacks\n      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n      // Tests for existence of standard globals is to allow style-loader\n      // to operate correctly into non-standard environments\n      // @see https://github.com/webpack-contrib/style-loader/issues/177\n      memo = Boolean(window && document && document.all && !window.atob);\n    }\n\n    return memo;\n  };\n}();\n\nvar getTarget = function getTarget() {\n  var memo = {};\n  return function memorize(target) {\n    if (typeof memo[target] === 'undefined') {\n      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n        try {\n          // This will throw an exception if access to iframe is blocked\n          // due to cross-origin restrictions\n          styleTarget = styleTarget.contentDocument.head;\n        } catch (e) {\n          // istanbul ignore next\n          styleTarget = null;\n        }\n      }\n\n      memo[target] = styleTarget;\n    }\n\n    return memo[target];\n  };\n}();\n\nvar stylesInDom = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDom.length; i++) {\n    if (stylesInDom[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var index = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3]\n    };\n\n    if (index !== -1) {\n      stylesInDom[index].references++;\n      stylesInDom[index].updater(obj);\n    } else {\n      stylesInDom.push({\n        identifier: identifier,\n        updater: addStyle(obj, options),\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction insertStyleElement(options) {\n  var style = document.createElement('style');\n  var attributes = options.attributes || {};\n\n  if (typeof attributes.nonce === 'undefined') {\n    var nonce =  true ? __webpack_require__.nc : 0;\n\n    if (nonce) {\n      attributes.nonce = nonce;\n    }\n  }\n\n  Object.keys(attributes).forEach(function (key) {\n    style.setAttribute(key, attributes[key]);\n  });\n\n  if (typeof options.insert === 'function') {\n    options.insert(style);\n  } else {\n    var target = getTarget(options.insert || 'head');\n\n    if (!target) {\n      throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n    }\n\n    target.appendChild(style);\n  }\n\n  return style;\n}\n\nfunction removeStyleElement(style) {\n  // istanbul ignore if\n  if (style.parentNode === null) {\n    return false;\n  }\n\n  style.parentNode.removeChild(style);\n}\n/* istanbul ignore next  */\n\n\nvar replaceText = function replaceText() {\n  var textStore = [];\n  return function replace(index, replacement) {\n    textStore[index] = replacement;\n    return textStore.filter(Boolean).join('\\n');\n  };\n}();\n\nfunction applyToSingletonTag(style, index, remove, obj) {\n  var css = remove ? '' : obj.media ? \"@media \".concat(obj.media, \" {\").concat(obj.css, \"}\") : obj.css; // For old IE\n\n  /* istanbul ignore if  */\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = replaceText(index, css);\n  } else {\n    var cssNode = document.createTextNode(css);\n    var childNodes = style.childNodes;\n\n    if (childNodes[index]) {\n      style.removeChild(childNodes[index]);\n    }\n\n    if (childNodes.length) {\n      style.insertBefore(cssNode, childNodes[index]);\n    } else {\n      style.appendChild(cssNode);\n    }\n  }\n}\n\nfunction applyToTag(style, options, obj) {\n  var css = obj.css;\n  var media = obj.media;\n  var sourceMap = obj.sourceMap;\n\n  if (media) {\n    style.setAttribute('media', media);\n  } else {\n    style.removeAttribute('media');\n  }\n\n  if (sourceMap && typeof btoa !== 'undefined') {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nvar singleton = null;\nvar singletonCounter = 0;\n\nfunction addStyle(obj, options) {\n  var style;\n  var update;\n  var remove;\n\n  if (options.singleton) {\n    var styleIndex = singletonCounter++;\n    style = singleton || (singleton = insertStyleElement(options));\n    update = applyToSingletonTag.bind(null, style, styleIndex, false);\n    remove = applyToSingletonTag.bind(null, style, styleIndex, true);\n  } else {\n    style = insertStyleElement(options);\n    update = applyToTag.bind(null, style, options);\n\n    remove = function remove() {\n      removeStyleElement(style);\n    };\n  }\n\n  update(obj);\n  return function updateStyle(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {\n        return;\n      }\n\n      update(obj = newObj);\n    } else {\n      remove();\n    }\n  };\n}\n\nmodule.exports = function (list, options) {\n  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n  // tags it will allow on a page\n\n  if (!options.singleton && typeof options.singleton !== 'boolean') {\n    options.singleton = isOldIE();\n  }\n\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    if (Object.prototype.toString.call(newList) !== '[object Array]') {\n      return;\n    }\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDom[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDom[_index].references === 0) {\n        stylesInDom[_index].updater();\n\n        stylesInDom.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack://portfolio/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
-
-/***/ }),
-
-/***/ "./src/assets/images/mockups/GO_ON_SALES_MOCK.png":
-/*!********************************************************!*\
-  !*** ./src/assets/images/mockups/GO_ON_SALES_MOCK.png ***!
-  \********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"c8d0b1b8c5ed593ba82b.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/GO_ON_SALES_MOCK.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/mockups/PAW_SHAPED_MOCK.png":
-/*!*******************************************************!*\
-  !*** ./src/assets/images/mockups/PAW_SHAPED_MOCK.png ***!
-  \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"2e18afb280c118832583.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/PAW_SHAPED_MOCK.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/mockups/PRIVATE_EVENTS_MOCK.png":
-/*!***********************************************************!*\
-  !*** ./src/assets/images/mockups/PRIVATE_EVENTS_MOCK.png ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"13a5f0869de4b9a5dbf2.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/PRIVATE_EVENTS_MOCK.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/mockups/RUBY_DOCS_MOCK.png":
-/*!******************************************************!*\
-  !*** ./src/assets/images/mockups/RUBY_DOCS_MOCK.png ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"6b19b33f53cef3b282f2.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/RUBY_DOCS_MOCK.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/mockups/STAY_TOUCH_MOCK.png":
-/*!*******************************************************!*\
-  !*** ./src/assets/images/mockups/STAY_TOUCH_MOCK.png ***!
-  \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"4fd83a33e2e0bc7cf5e6.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/mockups/STAY_TOUCH_MOCK.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/go-on-sales/footer.png":
-/*!**********************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/go-on-sales/footer.png ***!
-  \**********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"3a8075a9bc41fda91817.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/go-on-sales/footer.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/go-on-sales/main.png":
-/*!********************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/go-on-sales/main.png ***!
-  \********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"c40201377f780b796d60.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/go-on-sales/main.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/go-on-sales/search.png":
-/*!**********************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/go-on-sales/search.png ***!
-  \**********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"717111f27288c8cfc3b1.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/go-on-sales/search.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/pawshaped/Opera Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png":
-/*!********************************************************************************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/pawshaped/Opera Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png ***!
-  \********************************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"785453f248e62ee134a2.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/pawshaped/Opera_Snapshot_2021-03-14_044721_protected-sea-26942.herokuapp.com.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/pawshaped/accomplished-section.png":
-/*!**********************************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/pawshaped/accomplished-section.png ***!
-  \**********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"b7697a413e4b0e80243c.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/pawshaped/accomplished-section.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/pawshaped/paws.png":
-/*!******************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/pawshaped/paws.png ***!
-  \******************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"bf19ed10b7377c1cdd49.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/pawshaped/paws.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/stay-in-touch/friends.png":
-/*!*************************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/stay-in-touch/friends.png ***!
-  \*************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"6cffb1913b8724081fdd.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/stay-in-touch/friends.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/stay-in-touch/main.png":
-/*!**********************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/stay-in-touch/main.png ***!
-  \**********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"c7655c8b43ff86b1ba28.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/stay-in-touch/main.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/stay-in-touch/profile.png":
-/*!*************************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/stay-in-touch/profile.png ***!
-  \*************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"2640349866c1ba393b75.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/stay-in-touch/profile.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/zombie-raid/first.png":
-/*!*********************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/zombie-raid/first.png ***!
-  \*********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"ba75d834f0bbfdaf327e.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/zombie-raid/first.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/zombie-raid/game-over.png":
-/*!*************************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/zombie-raid/game-over.png ***!
-  \*************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"7b36735aba03e0c04072.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/zombie-raid/game-over.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/project-screenshots/zombie-raid/second.png":
-/*!**********************************************************************!*\
-  !*** ./src/assets/images/project-screenshots/zombie-raid/second.png ***!
-  \**********************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"49f938c04fb104326bc5.png\";\n\n//# sourceURL=webpack://portfolio/./src/assets/images/project-screenshots/zombie-raid/second.png?");
 
 /***/ })
 

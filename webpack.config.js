@@ -1,5 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
 
 module.exports = {
   entry: {
@@ -28,14 +30,33 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: 'asset',
       },
     ],
   },
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
+    }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        plugins: [
+          ['gifsicle', { interlaced: true }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 1 }],
+          [
+            'svgo',
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                },
+              ],
+            },
+          ],
+        ],
+      },
     }),
   ],
 };
