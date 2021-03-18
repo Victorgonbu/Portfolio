@@ -73,6 +73,7 @@
     color: transparent;
   }
 
+
   .project-link::after {
     transform: scale(0);
   }
@@ -95,7 +96,7 @@
   .modal .modal-middle-section {
     height: 15%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .modal .hero-project-image {
@@ -110,5 +111,6 @@
     padding-top: 1em;
     height: 100%;
     width: 50%;
+    
   }
 }

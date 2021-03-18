@@ -55,4 +55,13 @@
   .about-me p {
     width: 70%;
   }
+
+  .pop-button-hover{
+    margin-left: 10px;
+  }
+
+  .modal .project-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
