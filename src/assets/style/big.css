@@ -1,4 +1,4 @@
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
   body {
     font-size: 14px;
   }
@@ -23,7 +23,7 @@
   }
 
   .intro-info {
-    width: 50%;
+    width: 60%;
   }
 
   .grid {

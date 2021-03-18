@@ -2,6 +2,7 @@ import '../style/reset.css';
 import '../style/small.css';
 import '../style/medium.css';
 import '../style/big.css';
+import '../style/bigplus.css';
 import Dropdown from './dropdown';
 import Modal from './modal';
 

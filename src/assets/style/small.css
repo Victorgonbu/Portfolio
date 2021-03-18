@@ -1,7 +1,7 @@
 :root {
-  --main: #98b0a9;
-  --black: #000;
-  --exo-green: #00e4c2;
+  --main:  #245162;
+  --black: #141414;
+  --exo-green: #00C9B0;
   --background: #fff;
 }
 
@@ -140,12 +140,8 @@
 }
 
 .hero-span {
-  line-height: 0;
-  white-space: nowrap;
-  position: absolute;
-  right: 0;
-  bottom: 0;
   font-size: 0.3em;
+  white-space: nowrap;
 }
 
 .social-links {
@@ -219,7 +215,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  box-shadow: 1px 1px 5px var(--main);
+  
 }
 
 .project-1 {
@@ -253,6 +249,10 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.9766281512605042) 0%, rgba(2, 2, 32, 0.11948529411764708) 34%, rgba(1, 1, 8, 0.2763480392156863) 70%, rgba(0, 0, 0, 0.9066001400560224) 100%);
   opacity: 0;
   transition: opacity 100ms ease-in;
+}
+
+.item-row:hover {
+  box-shadow: 1px 1px 5px var(--main);
 }
 
 .item-row:hover .shade {
@@ -297,6 +297,7 @@
 
 .built-item {
   padding: 2px 5px;
+  font-size: 0.8em;
   color: black;
   background-color: white;
   transition: all 200ms ease-in 200ms;
@@ -308,8 +309,8 @@
 }
 
 .project-link {
-  padding: 1em 2em;
-  font-size: 1.35em;
+  padding: 1em 1.5em;
+  font-size: 1.20em;
   position: relative;
   z-index: 1;
   color: white;
@@ -474,7 +475,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--main);
+  background-color: var(--black);
   position: relative;
   z-index: 10;
   top: 10%;
@@ -483,17 +484,13 @@
 .footer-header {
   text-align: center;
   width: 100%;
-  max-width: 60vh;
+  max-width: 30%;
 }
 
 .footer-header h3 {
   padding: 1em;
   font-size: 2.5em;
-}
-
-.footer-header p {
-  line-height: 1.5;
-  font-size: 1.2em;
+  color: white;
 }
 
 .form-wrap {
@@ -510,13 +507,14 @@
 }
 
 .submit {
-  border: 1px solid black;
+  border: 1px solid white;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   margin-top: 1em;
   padding: 1em 0;
   font-size: 1.2em;
+  font-family: 'Merienda One', cursive;
 }
 
 .info-form input {
@@ -558,7 +556,7 @@
 }
 
 .footer-link:hover {
-  color: var(--black);
+  color: var(--exo-green);
 }
 
 .email {
@@ -737,7 +735,7 @@
   padding: 1.3em;
   color: black;
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1em;
   border: 1px solid var(--main);
   transform: translate(0, 0);
   transition: all 150ms ease;
