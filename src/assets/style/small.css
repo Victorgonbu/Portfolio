@@ -698,15 +698,15 @@
 }
 
 .modal-four .project-image-container.one {
-  background-image: url(../images/project-screenshots/zombie-raid/first.png);
+  background-image: url(../images/project-screenshots/private-events/first.png);
 }
 
 .modal-four .project-image-container.two {
-  background-image: url(../images/project-screenshots/zombie-raid/second.png);
+  background-image: url(../images/project-screenshots/private-events/second.png);
 }
 
 .modal-four .project-image-container.three {
-  background-image: url(../images/project-screenshots/zombie-raid/game-over.png);
+  background-image: url(../images/project-screenshots/private-events/last.png );
 }
 
 .modal-five .project-image-container.one {
