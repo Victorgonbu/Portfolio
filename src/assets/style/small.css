@@ -1,7 +1,7 @@
 :root {
-  --main:  #245162;
+  --main: #245162;
   --black: #141414;
-  --exo-green: #00C9B0;
+  --exo-green: #00c9b0;
   --background: #fff;
 }
 
@@ -215,7 +215,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  
 }
 
 .project-1 {
@@ -310,7 +309,7 @@
 
 .project-link {
   padding: 1.5em;
-  font-size: 1.20em;
+  font-size: 1.2em;
   position: relative;
   z-index: 1;
   color: white;
@@ -404,7 +403,7 @@
   width: 100%;
   max-width: 200px;
   margin-bottom: 10px;
-  transition: 0.15 ease-out;
+  transition: 15ms ease-out;
 }
 
 .pop-button-hover::before,
@@ -709,7 +708,7 @@
 }
 
 .modal-four .project-image-container.three {
-  background-image: url(../images/project-screenshots/private-events/last.png );
+  background-image: url(../images/project-screenshots/private-events/last.png);
 }
 
 .modal-five .project-image-container.one {

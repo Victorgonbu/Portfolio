@@ -1,4 +1,4 @@
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
   body {
     font-size: 14px;
   }
@@ -56,7 +56,7 @@
     width: 70%;
   }
 
-  .pop-button-hover{
+  .pop-button-hover {
     margin-left: 10px;
   }
 

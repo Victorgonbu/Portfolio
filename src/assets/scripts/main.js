@@ -21,5 +21,3 @@ seeProjectButtons.forEach(project => { project.addEventListener('click', () => {
 const projectImages = document.querySelectorAll('[data-image-target]');
 
 projectImages.forEach(image => { image.addEventListener('click', () => { Modal.setHeroImage(image); }); });
-
-

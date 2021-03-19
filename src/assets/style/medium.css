@@ -72,10 +72,9 @@
 
   .project-link {
     color: transparent;
-    width: fit-content;
+    width: auto;
     padding: 1em 1.5em;
   }
-
 
   .project-link::after {
     transform: scale(0);
@@ -94,7 +93,6 @@
   .footer-header {
     max-width: 30%;
   }
-  
 
   .modal .project-images {
     max-width: 400px;
@@ -119,6 +117,5 @@
     padding-top: 1em;
     height: 100%;
     width: 50%;
-    
   }
 }

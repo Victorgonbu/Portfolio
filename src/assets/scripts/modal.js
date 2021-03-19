@@ -64,12 +64,12 @@ const Modal = (() => {
   });
 
   document.addEventListener('keydown', (event) => {
-    if(event.key === 'Escape') {
+    if (event.key === 'Escape') {
       const modal = document.querySelector('.modal.active');
       if (modal) close(modal);
     }
   });
-  
+
   defaultHeroImages.forEach(setHeroImage);
   closeButtons.forEach(button => {
     button.addEventListener('click', () => {
