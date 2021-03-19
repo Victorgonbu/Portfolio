@@ -88,6 +88,11 @@
     color: black;
   }
 
+  .footer-header {
+    max-width: 30%;
+  }
+  
+
   .modal .project-images {
     max-width: 400px;
     height: 100%;
