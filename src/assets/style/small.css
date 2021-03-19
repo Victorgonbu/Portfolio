@@ -204,7 +204,7 @@
 .item-row {
   font-size: 1em;
   margin: 10px 0;
-  padding: 2rem 2rem 3rem 2rem;
+  padding: 2rem 2rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -309,7 +309,7 @@
 }
 
 .project-link {
-  padding: 1em 1.5em;
+  padding: 1.5em;
   font-size: 1.20em;
   position: relative;
   z-index: 1;
@@ -317,6 +317,9 @@
   text-decoration: none;
   cursor: pointer;
   transition: color 20ms ease-in 440ms;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .project-link i {
