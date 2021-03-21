@@ -1,0 +1,121 @@
+@media (min-width: 675px) {
+  .navigation-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .drop-down {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .hero-span {
+    right: 15%;
+  }
+
+  .item-row {
+    height: 50vh;
+    padding: 2rem 2rem 3rem 2rem;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .about-section > div {
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .about-me p {
+    margin: 2em 0;
+    width: 85%;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-attributes {
+    padding: 0 2em;
+  }
+
+  .info-form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .info-form input {
+    width: calc(46% - 1em);
+    margin: 0;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .project-title {
+    color: transparent;
+  }
+
+  .project-title::before {
+    transform: scaleX(0);
+  }
+
+  .project-link {
+    color: transparent;
+    width: auto;
+    padding: 1em 1.5em;
+  }
+
+  .project-link::after {
+    transform: scale(0);
+  }
+
+  .built-item {
+    color: transparent;
+    background-color: transparent;
+  }
+
+  .built-item.active {
+    background-color: white;
+    color: black;
+  }
+
+  .footer-header {
+    max-width: 30%;
+  }
+
+  .modal .project-images {
+    max-width: 400px;
+    height: 100%;
+  }
+
+  .modal .modal-middle-section {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal .hero-project-image {
+    height: 60%;
+  }
+
+  .modal .project-info {
+    height: 25%;
+  }
+
+  .modal .project-buttons {
+    padding-top: 1em;
+    height: 100%;
+    width: 50%;
+  }
+}
