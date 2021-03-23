@@ -1,4 +1,4 @@
-# Hey!
+# Hey There!
 ## Welcome to my personal portfolio!
 
 # Credits
