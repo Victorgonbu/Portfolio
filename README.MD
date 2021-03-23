@@ -1,5 +1,5 @@
 # Hey There!
-## Welcome to my personal portfolio!
+## Welcome to my personal portfolio.
 
 # Credits
 
